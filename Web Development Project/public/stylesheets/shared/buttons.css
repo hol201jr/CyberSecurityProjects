@@ -1,0 +1,52 @@
+:root {
+  --color-btn-primary-text: #263859;
+  --color-btn-primary-background:rgb(0, 128, 128);
+  --color-btn-border: black;
+}
+
+.btn {
+  border: 1px solid var(--color-btn-border);
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-row {
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.btn-row > * {
+  margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+  margin-left: 0;
+}
+
+.btn-primary {
+  color: var(--color-btn-primary-text);
+  background-color: var(--color-btn-primary-background);
+
+}
+
+.btn-primary:hover {
+  color: rgb(2, 7, 69);
+  background-color: rgb(3, 208, 208);
+
+}
+
+.btn-danger {
+  color: black;
+  background-color: rgb(218, 145, 11);
+}
+
+.btn-danger:hover {
+  color: rgb(185, 7, 7);
+  background-color: rgb(159, 108, 13);
+}

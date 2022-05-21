@@ -1,0 +1,60 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Test ID</label>
+    <input type="string" name="testid" value="<% test.testid %>">
+  </div>
+  <div class="form-item">
+    <label>Project</label>
+    <select name="project">
+      <% projects.forEach(project=> { %>
+        <% if (project.id === test.project) { %>
+          <option selected label="<%= project.name %>" value="<%= project.id %>"></option>
+        <% } else { %>
+          <option label="<%= project.name %>" value="<%= project.id %>"></option>
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-item">
+    <div>
+      <label>Date</label>
+      <input type="date" name="date" value="<%= test.date %>">
+    </div>
+  </div>
+  <div class="form-item">
+    <div>
+      <label>Time</label>
+      <input type="string" name="time" value="<% test.time %>">
+    </div>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-item">
+    <div>
+      <label>Capture</label>
+      <input type="number" name="capture" value="<% test.capture %>">
+    </div>
+  </div>
+  <div class="form-item">
+    <div>
+      <label>Processing</label>
+      <input type="number" name="processing" value="<% test.processing %>">
+    </div>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-item">
+    <div>
+      <label>Visualize</label>
+      <input type="number" name="visualize" value="<% test.visualize %>">
+    </div>
+  </div>
+  <div class="form-item">
+    <div>
+      <label>Amount of Data in GB</label>
+      <input type="number" name="amountofdata" value="<% test.amountofdata %>">
+    </div>
+  </div>
+</div>

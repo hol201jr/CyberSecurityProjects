@@ -1,0 +1,12 @@
+<h2>Search Tests</h2>
+<form action="/tests" method="GET">
+  <div>
+    <label>Tests</label>
+    <input type="text" name="testid" value="<%= searchOptions.testid %>">
+    <button class="btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br>
+<% tests.forEach(test => { %>
+  <div><%= test.testid %></div>
+<% }) %>

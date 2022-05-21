@@ -1,0 +1,9 @@
+<h2 class="page-header"><%= project.name %></h2>
+<a href="/projects/<%= project.id %>/edit">Edit</a>
+<%- include('../partials/deleteform', {url: `projects/${project.id}`}) %>
+<% if (testsByProject.length > 0) { %>
+  <h2>Tests by Project</h2>
+  <% testsByProject.forEach(test => { %>
+    <div><%= test.testid %></div>
+  <% }) %>
+<% } %>

@@ -1,0 +1,15 @@
+<h2 class="page-header">Search Projects</h2>
+<form action="/projects" method="GET">
+  <label>Project</label>
+  <input type="text" name="name" value="<%= searchOptions.Name %>">
+  <button type="submit">Search</button>
+</form>
+<br>
+<% projects.forEach(project => { %>
+<div class="projectnames"><%= project.name %></div>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/projects/<%= project.id %>">View</a>
+  <a class="btn btn-primary" href="/projects/<%= project.id %>/edit">Edit</a>
+  <%- include('../partials/deleteform', {url:`/projects/${project.id}`}) %>
+</div>
+  <% }) %>
