@@ -1,0 +1,5 @@
+In this folder I have a project in which I established a mock scenario where files are encrypted and have a signature added. 
+On the other end the program check for the signature and decryts if authenticated. 
+
+The code runs using Open SSL.
+
